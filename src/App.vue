@@ -11,7 +11,7 @@
 
     <!-- Provides the application the proper gutter -->
     <v-container fluid>
-
+        <Loginpage/>
       <!-- If using vue-router 
       <router-view></router-view>
       -->
@@ -26,8 +26,8 @@
 
 <script>
 //import HelloWorld from './components/HelloWorld';
-/*import asuprime from './components/asuprime';
-import Loginpage from './components/login'
+/*import asuprime from './components/asuprime';*/
+import Loginpage from './components/login'/*
 import slidegroupeservice from './components/slidegroupservice'
 import semplefooter from './components/semplefooter'
 import bchat from './components/bchar'
@@ -45,8 +45,8 @@ export default {
                barnav,
  //              burger,
  //   HelloWorld,
- /*     asuprime,
-      Loginpage,
+ /*     asuprime,*/
+      Loginpage,/*
       slidegroupeservice,
       semplefooter,
       SimpleCarousel,

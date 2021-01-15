@@ -10,7 +10,7 @@ export default new Vuex.Store({
          month:12,
          year:1982,
          Value_Inv_State:false,
-         Lang_Value:true,
+         Lang_Value:false,
          CarouselsIndex:0,
          colors: [
           'blue-grey darken-4',
@@ -37,7 +37,7 @@ export default new Vuex.Store({
   mutations: {
          invState (state,Value_Inv_State)
           {
-          state.Value_Inv_State=!Value_Inv_State
+          state.Value_Inv_State=!state.Value_Inv_State
           },
           Lang_invState (state)
           {

@@ -1,6 +1,6 @@
 <template>
-<div id="idlogin">
-	<!--    <v-app>-->
+    <div id="idlogin" v-if="$store.state.Value_Inv_State">
+        <!--    <v-app>-->
         <v-dialog v-model="dialog" persistent max-width="600px" min-width="360px">
             <div>
                 <v-tabs v-model="tab" show-arrows background-color="deep-purple accent-4" icons-and-text dark grow>
@@ -66,11 +66,11 @@
                                 <v-form ref="Closertab" v-model="valid" lazy-validation>
                                     <v-row>
                                         <v-col cols="12">
-						<p>
+                                            <p>
 
-							سيسمح لك تسجيل الدخول إلى منطقة العملاء بإدارة أعمالك بشكل أفضل والتواصل معنا وكلائنا بثقة تامة.
-                                              </p>
-<p>Logging into the Client Area will allow you to better manage your business and communicate with us and our agents with complete confidence.</p>
+                                            سيسمح لك تسجيل الدخول إلى منطقة العملاء بإدارة أعمالك بشكل أفضل والتواصل معنا وكلائنا بثقة تامة.
+                                            </p>
+                                            <p>Logging into the Client Area will allow you to better manage your business and communicate with us and our agents with complete confidence.</p>
                                         </v-col>
                                         <v-col cols="12">
                                         </v-col>
@@ -79,9 +79,9 @@
                                         <v-spacer></v-spacer>
                                         <v-col class="d-flex" cols="12" sm="3" xsm="12" align-end>
                                             <v-btn x-large block :disabled="!valid" color="warning"
-                                                    @click="
-                                                   $store.commit('invState', $store.state.Value_Inv_State)
-                                                    "> Close </v-btn>
+                                                                                    @click="
+                                                                                    $store.commit('invState', $store.state.Value_Inv_State)
+                                                                                    "> Close </v-btn>
                                         </v-col>
                                     </v-row>
                                 </v-form>
@@ -91,70 +91,70 @@
                 </v-tabs>
             </div>
         </v-dialog>
-	<!--    </v-app> -->
-</div>
+        <!--    </v-app> -->
+    </div>
 </template>
 
 
 <script>
-  export default {
+export default {
     name: 'Loginpage',
 
 
 
-//new Vue({
-//  el: '#app',
-//  vuetify: new Vuetify(),
-  computed: {
-    passwordMatch() {
-      return () => this.password === this.verify || "Password must match";
-    }
-  },
-  methods: {
-    validate() {
-      if (this.$refs.loginForm.validate()) {
-        // submit form to server/API here...
-      }
+    //new Vue({
+    //  el: '#app',
+    //  vuetify: new Vuetify(),
+    computed: {
+        passwordMatch() {
+            return () => this.password === this.verify || "Password must match";
+        }
     },
-    reset() {
-      this.$refs.form.reset();
+    methods: {
+        validate() {
+            if (this.$refs.loginForm.validate()) {
+                // submit form to server/API here...
+            }
+        },
+        reset() {
+            this.$refs.form.reset();
+        },
+        resetValidation() {
+            this.$refs.form.resetValidation();
+        }
     },
-    resetValidation() {
-      this.$refs.form.resetValidation();
-    }
-  },
-  data: () => ({
-    dialog: true,
-    tab: 0,
-    tabs: [
-        {name:"Login", icon:"mdi-account"},
-        {name:"Register", icon:"mdi-account-outline"},
-        {name:"Close",icon: "mdi-close"}
-    ],
-    valid: true,
+    data: () => ({
+        dialog: true,
+        tab: 0,
+        tabs: [
+            {name:"Login", icon:"mdi-account"},
+            {name:"Register", icon:"mdi-account-outline"},
+            {name:"Close",icon: "mdi-close"}
+        ],
+        valid: true,
 
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    verify: "",
-    loginPassword: "",
-    loginEmail: "",
-    loginEmailRules: [
-      v => !!v || "Required",
-      v => /.+@.+\..+/.test(v) || "E-mail must be valid"
-    ],
-    emailRules: [
-      v => !!v || "Required",
-      v => /.+@.+\..+/.test(v) || "E-mail must be valid"
-    ],
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        verify: "",
+        loginPassword: "",
+        loginEmail: "",
+        loginEmailRules: [
+            v => !!v || "Required",
+            v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+        ],
+        emailRules: [
+            v => !!v || "Required",
+            v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+        ],
 
-    show1: false,
-    rules: {
-      required: value => !!value || "Required.",
-      min: v => (v && v.length >= 8) || "Min 8 characters"
-    }
-  })
-//});
-  }
+        show1: false,
+        rules: {
+            required: value => !!value || "Required.",
+            min: v => (v && v.length >= 8) || "Min 8 characters"
+        }
+    })
+    //});
+}
 </script>

@@ -8,7 +8,42 @@
       dark
     >
     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-     <!--********************************************************************-->
+    <!--*****************************Router*********************************-->
+      <v-list class="pa-4">
+        <v-list-tile active-class="green--text" to="/">
+          <v-list-tile-content>
+            <v-list-tile-title  class="pa-2">HOME</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile active-class="green--text" to="/resume">
+          <v-list-tile-content>
+            <v-list-tile-title class="pa-2"><v-icon>mdi-home</v-icon>  RESUME</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile active-class="green--text" to="/services">
+          <v-list-tile-content>
+            <v-list-tile-title>SERVICES</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile active-class="green--text" to="/portfolio">
+          <v-list-tile-content>
+            <v-list-tile-title>PORTFOLIO</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile active-class="green--text" to="/blog">
+          <v-list-tile-content>
+            <v-list-tile-title>BLOG</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile active-class="green--text" to="/contact">
+          <v-list-tile-content>
+            <v-list-tile-title>CONTACT</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+	
+    <!--********************************************************************-->
+    <!--********************************************************************-->
 {{$store.state.CarouselsIndex}}
 <!--********************************************************************-->
 
@@ -122,7 +157,7 @@ export default {
         Xdark:0,
         Xheart:0,
 	SearchB:0,
-        Loginstate:false,
+        Loginstate:true,
         colorN: 'blue-grey darken-4',
         colors: [
           'blue-grey darken-4',
