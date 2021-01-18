@@ -9,15 +9,22 @@
     >
     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     <!--*****************************Router*********************************-->
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+
       <v-list class="pa-4">
         <v-list-tile active-class="green--text" to="/">
           <v-list-tile-content>
-            <v-list-tile-title  class="pa-2">HOME</v-list-tile-title>
+            <v-list-tile-title  class="pa-2">
+				<router-link to="/">Home</router-link>
+			</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile active-class="green--text" to="/resume">
           <v-list-tile-content>
-            <v-list-tile-title class="pa-2"><v-icon>mdi-home</v-icon>  RESUME</v-list-tile-title>
+            <v-list-tile-title class="pa-2">
+					<v-icon>mdi-home</v-icon>  RESUME
+			</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile active-class="green--text" to="/services">
@@ -37,7 +44,11 @@
         </v-list-tile>
         <v-list-tile active-class="green--text" to="/contact">
           <v-list-tile-content>
-            <v-list-tile-title>CONTACT</v-list-tile-title>
+            <v-list-tile-title>
+               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-flashlight</v-icon>
+               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-flashlight-off</v-icon>
+               <router-link to="/contact">CONTACT</router-link>
+			</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>

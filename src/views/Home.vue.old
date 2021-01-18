@@ -23,7 +23,7 @@
 
     <br>
 
-    <vue-typer class="headline" :repeat="0" text="Hermit-ZAH"></vue-typer>
+    <vue-typer class="headline" :repeat="0" text="Eldin Zaimovic"></vue-typer>
     <vue-typer
       :text="text1"
       :repeat="Infinity"
@@ -102,7 +102,7 @@ import VueCompareImage from "vue-compare-image";
 export default {
   metaInfo: {
     title: "Home",
-    titleTemplate: "%s ← Hermit-ZAH",
+    titleTemplate: "%s ← Eldin's Space",
     meta: [
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "description", content: "Eldin Zaimovic's Portfolio" },
@@ -125,27 +125,27 @@ export default {
   data() {
     return {
       icons: [
-        { href: "https://github.com/EldinZaimovic", icon: "mdi-github" },
+        { href: "https://github.com/EldinZaimovic", icon: "fab fa-github" },
         {
           href: "https://stackoverflow.com/users/story/9660700",
-          icon: "mdi-stack-overflow"
+          icon: "fab fa-stack-overflow"
         },
-        { href: "https://twitter.com/EldinMatricar", icon: "mdi-twitter" },
+        { href: "https://twitter.com/EldinMatricar", icon: "fab fa-twitter" },
         {
           href: "https://www.linkedin.com/in/eldin-zaimovic",
-          icon: "mdi-linkedin"
+          icon: "fab fa-linkedin-in"
         },
         {
           href: "https://www.xing.com/profile/Eldin_Zaimovic?sc_o=mxb_p",
-          icon: "mdi-xing"
+          icon: "fab fa-xing"
         },
         {
           href: "https://www.facebook.com/EldinVasVoli",
-          icon: "mdi-facebook"
+          icon: "fab fa-facebook-f"
         },
-        { href: "https://www.instagram.com/matricar", icon: "mdi-instagram" }
+        { href: "https://www.instagram.com/matricar", icon: "fab fa-instagram" }
       ],
-      text1: ["Full Stack Developer", "Numerical Simulation", "Internet of things","Cryptography in Blockchain"],
+      text1: ["Front-End Developer", "Web Developer", "Web Designer"],
       leftImage: "https://i.imgur.com/bU50uS9.jpg",
       rightImage: "https://i.imgur.com/z3ZoEEw.jpg",
       leftImage2: "https://i.imgur.com/SXBitjh.jpg",

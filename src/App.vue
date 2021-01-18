@@ -12,15 +12,16 @@
     <!-- Provides the application the proper gutter -->
     <v-container fluid>
         <Loginpage/>
+        <burger/>
       <!-- If using vue-router 
-      <router-view></router-view>
       -->
     </v-container>
   </v-main>
-  <burger/>
   <v-footer app>
     <!-- -->
   </v-footer>
+
+      <router-view></router-view>
 </v-app>
 </template>
 
