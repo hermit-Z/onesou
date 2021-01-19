@@ -172,6 +172,7 @@ export default {
           'success',
           'red',
           'teal',
+          'purple darken-4',
                   ],
           langstate:false,
 

@@ -13,7 +13,6 @@
     <v-container fluid>
         <Loginpage/>
 
-  <footer/>
         <burger/>
       <!-- If using vue-router 
       -->
@@ -21,6 +20,8 @@
   </v-main>
 
       <router-view></router-view>
+
+  <footerc/>
 </v-app>
 </template>
 
@@ -34,7 +35,7 @@ import bchat from './components/bchar'
 //import langselector from './components/langselector'
 import SimpleCarousel from './components/SimpleCarousel'*/
 import barnav from './components/barnav'
-import footer from './components/footer.vue'
+import footerc from './components/footerf'
 //import burger from './components/burger'
 //import langselector1 from './components/langselector1' //perfect compononent
 //import { mapState } from 'vuex'
@@ -43,9 +44,8 @@ export default {
   name: 'App',
 
   components: {
-               barnav,
- //              burger,
-      footer,
+      barnav,
+      footerc,
       Loginpage,/*
       bchat,*/
    },

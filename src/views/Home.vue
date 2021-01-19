@@ -40,26 +40,6 @@
     <br>
     <v-flex xs12 sm6 md4 lg4 xl4>
       <v-card flat color="transparent" max-width="500">
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">
-              <span>About</span>
-              <span class="green--text">Me</span>
-            </h3>
-            <div>
-              <p>
-                Hello! I’m Eldin Zaimovic. I'm a front-end developer who
-                is passionate about
-                <span
-                  class="green--text font-weight-bold"
-                >VUE</span>, building great user experiences,
-                fighting for simplicity over complexity and constantly learning.
-                When I'm not coding or making videos, you'll find me traveling across Europe.
-              </p>
-            </div>
-          </div>
-        </v-card-title>
-
         <v-card-actions class="hidden-sm-and-down">
           <v-btn
             v-for="icon in icons"
@@ -75,21 +55,6 @@
           </v-btn>
         </v-card-actions>
 
-        <v-card-actions class="hidden-md-and-up justify-center">
-          <v-btn
-            v-for="icon in icons"
-            :key="icon.icon"
-            small
-            fab
-            dark
-            outline
-            color="green"
-            :href="icon.href"
-            target="_blank"
-          >
-            <v-icon dark>{{icon.icon}}</v-icon>
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </v-flex>
   </v-layout>
@@ -124,28 +89,7 @@ export default {
   },
   data() {
     return {
-      icons: [
-        { href: "https://github.com/EldinZaimovic", icon: "mdi-github" },
-        {
-          href: "https://stackoverflow.com/users/story/9660700",
-          icon: "mdi-stack-overflow"
-        },
-        { href: "https://twitter.com/EldinMatricar", icon: "mdi-twitter" },
-        {
-          href: "https://www.linkedin.com/in/eldin-zaimovic",
-          icon: "mdi-linkedin"
-        },
-        {
-          href: "https://www.xing.com/profile/Eldin_Zaimovic?sc_o=mxb_p",
-          icon: "mdi-xing"
-        },
-        {
-          href: "https://www.facebook.com/EldinVasVoli",
-          icon: "mdi-facebook"
-        },
-        { href: "https://www.instagram.com/matricar", icon: "mdi-instagram" }
-      ],
-      text1: ["Full Stack Developer", "Numerical Simulation", "Internet of things","Cryptography in Blockchain"],
+      text1: ["Full Stack Developer", "Numerical Simulation", "Internet of things","Cryptography & Blockchain"],
       leftImage: "https://i.imgur.com/bU50uS9.jpg",
       rightImage: "https://i.imgur.com/z3ZoEEw.jpg",
       leftImage2: "https://i.imgur.com/SXBitjh.jpg",
