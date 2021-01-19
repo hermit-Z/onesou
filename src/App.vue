@@ -12,14 +12,13 @@
     <!-- Provides the application the proper gutter -->
     <v-container fluid>
         <Loginpage/>
+
+  <footer/>
         <burger/>
       <!-- If using vue-router 
       -->
     </v-container>
   </v-main>
-  <v-footer app>
-    <!-- -->
-  </v-footer>
 
       <router-view></router-view>
 </v-app>
@@ -35,6 +34,7 @@ import bchat from './components/bchar'
 //import langselector from './components/langselector'
 import SimpleCarousel from './components/SimpleCarousel'*/
 import barnav from './components/barnav'
+import footer from './components/footer.vue'
 //import burger from './components/burger'
 //import langselector1 from './components/langselector1' //perfect compononent
 //import { mapState } from 'vuex'
@@ -45,15 +45,9 @@ export default {
   components: {
                barnav,
  //              burger,
- //   HelloWorld,
- /*     asuprime,*/
+      footer,
       Loginpage,/*
-      slidegroupeservice,
-      semplefooter,
-      SimpleCarousel,
       bchat,*/
-//      langselector1,
-//      vueflags,
    },
 
   data: () => ({

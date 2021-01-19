@@ -24,7 +24,24 @@ const routes: Array<RouteConfig> = [
     component: () =>
     import( /* webpackChunkName: "about" */ "../views/Contact.vue")
   },
-
+  {
+    path: "/blog",
+    name: "Blog",
+    component: () =>
+    import( /* webpackChunkName: "about" */ "../views/Blog.vue")
+  },
+  {
+    path: "/About",
+    name: "about",
+    component: () =>
+    import( /* webpackChunkName: "about" */ "../views/About.vue")
+  },
+  {
+    path: "/services",
+    name: "Services",
+    component: () =>
+    import( /* webpackChunkName: "about" */ "../views/Services.vue")
+  },
 ]
 
 const router = new VueRouter({

@@ -9,50 +9,44 @@
     >
     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     <!--*****************************Router*********************************-->
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+	<div class="ma-2">
+        <v-icon>mdi-home</v-icon>
+		<router-link to="/">Home</router-link>
+	</div>
+	<div class="ma-2">
 
-      <v-list class="pa-4">
-        <v-list-tile active-class="green--text" to="/">
-          <v-list-tile-content>
-            <v-list-tile-title  class="pa-2">
-				<router-link to="/">Home</router-link>
-			</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile active-class="green--text" to="/resume">
-          <v-list-tile-content>
-            <v-list-tile-title class="pa-2">
-					<v-icon>mdi-home</v-icon>  RESUME
-			</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile active-class="green--text" to="/services">
-          <v-list-tile-content>
-            <v-list-tile-title>SERVICES</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile active-class="green--text" to="/portfolio">
-          <v-list-tile-content>
-            <v-list-tile-title>PORTFOLIO</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile active-class="green--text" to="/blog">
-          <v-list-tile-content>
-            <v-list-tile-title>BLOG</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile active-class="green--text" to="/contact">
-          <v-list-tile-content>
-            <v-list-tile-title>
-               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-flashlight</v-icon>
-               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-flashlight-off</v-icon>
+               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-book-account</v-icon>
+               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-book-account-outline</v-icon>
+               <router-link to="/about">About Me</router-link>
+	</div>
+	<div class="ma-2" >
+
+               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-cog</v-icon>
+               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-cog-outline</v-icon>
+               <router-link to="/services">SERVICES</router-link>
+	</div>
+	<div class="ma-2" v-if="Xteam===1">
+
+               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-bank</v-icon>
+               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-bank-outline</v-icon>
+               <router-link to="/portfolio">PORTFOLIO</router-link>
+	</div>
+	<div class="ma-2">
+
+	</div>
+	<div class="ma-2" >
+
+               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-folder-home</v-icon>
+               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-folder-home-outline</v-icon>
+               <router-link to="/blog">BLOG</router-link>
+	</div>
+	<div class="ma-2" >
+
+               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-phone-outline</v-icon>
+               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-phone</v-icon>
                <router-link to="/contact">CONTACT</router-link>
-			</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-	
+	</div>
+
     <!--********************************************************************-->
     <!--********************************************************************-->
 {{$store.state.CarouselsIndex}}
@@ -167,6 +161,7 @@ export default {
         counter1:0,
         Xdark:0,
         Xheart:0,
+		Xteam:0,
 	SearchB:0,
         Loginstate:true,
         colorN: 'blue-grey darken-4',
