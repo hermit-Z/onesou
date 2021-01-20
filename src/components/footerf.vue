@@ -3,18 +3,36 @@
     dark
     padless
   >
-    <v-card
-      flat
+      <v-row   
+        class="indigo lighten-1 white--text text-center pa-0 ma-0 ">
+
+        <v-col
+          cols="2"
+        >
+         <v-text-field v-model="email" :rules="emailRules" dense label="newsletter subscribers" required>mdi-email-newsletter</v-text-field>
+
+            </v-col>
+		
+        <v-col
+          cols="1"
+          class="pl-0 ml-0"
+        >
+      <v-btn
       tile
-      class="indigo lighten-1 white--text text-center"
-    >
-      <v-card-text>
-            <v-text-field cols="2"
-            v-model="message1"
-            label="Regular"
-            clearable
-          ></v-text-field>
-          <v-btn
+      color="blue-grey darken-4"
+      dense
+      >
+      <v-icon left>
+      mdi-email-newsletter
+      </v-icon>
+      subscribers
+      </v-btn>
+      </v-col>
+      <v-col cols="1">
+      
+      </v-col>
+		<v-col cols ="6">
+        <v-btn
             v-for="icon in iconssm"
             :key="icon.icon"
             :href="icon.href"
@@ -23,19 +41,29 @@
           >
             <v-icon size="24px">{{icon.icon}}</v-icon>
           </v-btn>
-      </v-card-text>
+		</v-col>
 
-      <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      </v-card-text>
+      <v-col cols="1">
+      
+      </v-col>
+      <v-col cols="1">
+	<div >
 
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-card-text>
-    </v-card>
+               <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-phone-outline</v-icon>
+               <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-phone</v-icon>
+               <router-link to="/contact">CONTACT</router-link>
+	</div>
+      
+      </v-col>
+      </v-row>
+  <v-row>
+     <v-col cols="12"       class="indigo lighten-1 white--text text-center pl-0 ml-0">
+     
+<v-icon>mdi-copyright</v-icon> - <strong>copyright</strong> - {{ new Date().getFullYear() }}
+    </v-col>
+  </v-row>  
   </v-footer>
+
 </template>
 
 <script>
@@ -68,9 +96,16 @@ export default {
         },
         { href: "https://www.instagram.com/matricar", icon: "mdi-instagram" }
       ],
+       loginEmailRules: [
+            v => !!v || "Required",
+            v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+        ],
+        emailRules: [
+            v => !!v || "Required",
+            v => /.+@.+\..+/.test(v) || "E-mail must be valid"],
+
   }),
 
 
 }
 </script>
-
