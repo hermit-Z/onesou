@@ -13,17 +13,17 @@
       >
       <v-row class="pa-0 ma-0">
 		<v-col cols="8" class="pa-0 ma-0" >
-         <v-text-field v-model="loginEmail" :rules="loginEmailRules" label="E-mail" required></v-text-field>
+         <v-text-field v-model="loginEmail" :rules="loginEmailRules" label="Subscibe in newsletters" required></v-text-field>
 		</v-col>
-        <v-col cols="4" class="pa-0 ma-0">
+        <v-col cols="4" class="pl-0 ml-0">
          <v-btn
          tile
-         color="success"
+         color="success ml-0"
          >
          <v-icon left>
-          mdi-pencil
+           mdi-email-newsletter
          </v-icon>
-          Edit
+          Subscibe
          </v-btn>
         </v-col>
        </v-row>
@@ -79,9 +79,9 @@ export default {
   data: () => ({
 		//Xteam:0,
       iconssm: [
-        { href: "https://github.com/EldinZaimovic", icon: "mdi-github" },
+        { href: "https://github.com/hermit-Z", icon: "mdi-github" },
         {
-          href: "https://stackoverflow.com/users/story/9660700",
+          href: "https://stackexchange.com/users/20310513/hermit-z",
           icon: "mdi-stack-overflow"
         },
         { href: "https://twitter.com/EldinMatricar", icon: "mdi-twitter" },
