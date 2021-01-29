@@ -11,15 +11,24 @@
 
     <!-- Provides the application the proper gutter -->
     <v-container fluid>
+      <v-layout row wrap>
+       <v-flex xs12 md9>
+       
         <Loginpage/>
 
+      <router-view></router-view>
         <burger/>
+       </v-flex>
+       <v-flex xs12 md3>
+       
+		<chat/>
+        </v-flex>
+      </v-layout>
       <!-- If using vue-router 
       -->
     </v-container>
   </v-main>
 
-      <router-view></router-view>
 
   <footerc/>
 </v-app>
@@ -31,9 +40,9 @@
 import Loginpage from './components/login'/*
 import slidegroupeservice from './components/slidegroupservice'
 import semplefooter from './components/semplefooter'
-import bchat from './components/bchar'
 //import langselector from './components/langselector'
 import SimpleCarousel from './components/SimpleCarousel'*/
+import chat from './components/chat'
 import barnav from './components/barnav'
 import footerc from './components/footerf'
 //import burger from './components/burger'
@@ -46,8 +55,8 @@ export default {
   components: {
       barnav,
       footerc,
-      Loginpage,/*
-      bchat,*/
+      Loginpage,
+      chat,
    },
 
   data: () => ({
