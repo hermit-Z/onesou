@@ -1,33 +1,6 @@
 <template>
-<div id="app">
-  <v-app id="inspire">
-    <v-card>
-      <v-tabs vertical>
-        <v-tab>
-          <v-icon left>mdi-account</v-icon>
-          curriculum vitæ
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-lock</v-icon>
-          Option 2
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-access-point</v-icon>
-          Option 3
-        </v-tab>
-         <v-tab>
-          <v-icon left>mdi-lock</v-icon>
-          Option 4
-        </v-tab>
-        <v-tab>
-          <v-icon left>mdi-access-point</v-icon>
-          Option 5
-        </v-tab> 
-        <v-tab-item>
-          <v-card flat>
-            <v-card-text>
-              <v-layout row wrap>
-                  <v-flex xs12 sm12 md5 lg6 xl6 class="mt-4 pt-4">
+  <v-layout row justify-center align-center wrap class="mt-4 pt-2">
+    <v-flex xs12 sm12 md5 lg6 xl6 class="mt-4 pt-4">
       <h2 class="mb-4 pl-4 pt-2">Education</h2>
       <v-card-text class="py-0">
         <v-timeline align-top dense>
@@ -117,27 +90,8 @@
         </v-timeline>
       </v-card-text>
     </v-flex>
-      <div class="mt-4 pt-2">
-        <v-btn
-          href="https://docs.google.com/document/d/1WSR42FEgUahJuR_RArW1wz7TfUBlgj13zekRidmQgs4/edit?usp=sharing"
-          target="_blank"
-          color="green"
-          dark
-          large
-        >
-          Download Resume
-          <v-icon right dark>fas fa-file-download</v-icon>
-        </v-btn>
-      </div>
-    </v-layout>
-            </v-card-text>
-          </v-card>
-        </v-tab-item>
-        <v-tab-item>
-          <v-card flat>
-            <v-card-text>
-              
-                   <v-layout row justify-center align-center wrap class="mt-4 pt-2">
+
+    <v-layout row justify-center align-center wrap class="mt-4 pt-2">
       <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
         <h2>
           <span>WebDesign</span>
@@ -195,16 +149,8 @@
         <v-progress-linear v-model="buffer6" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
       </v-flex>
 <!-- ---------------------------------------------------------------------------------------- -->
-              </v-layout>
-  
-            </v-card-text>
-          </v-card>
-        </v-tab-item>
-        <v-tab-item>
-          <v-card flat>
-            <v-card-text>
-               <!-- ---------------------------------------------------------------------------------------- -->
-             <v-layout> 
+<!-- ---------------------------------------------------------------------------------------- -->
+
       <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
         <h2>
           <span>EngineeringDesign</span>
@@ -262,17 +208,9 @@
         <strong>GMSH</strong>
         <v-progress-linear v-model="buffer6" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
       </v-flex>
-    </v-layout>
 <!-- ---------------------------------------------------------------------------------------- -->
 
- 
-            </v-card-text>
-          </v-card>
-        </v-tab-item>
-        <v-tab-item>
-          <v-card flat>
-            <v-card-text>   
-              <!-- ---------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------- -->
 
       <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
         <h2>
@@ -332,15 +270,20 @@
         <v-progress-linear v-model="buffer6" :buffer-value="bufferValue" color="green" height="16"></v-progress-linear>
       </v-flex>
 <!-- ---------------------------------------------------------------------------------------- -->
-              
-            </v-card-text>
-          </v-card>
-        </v-tab-item> 
-      </v-tabs>
-    </v-card>
-  </v-app>
-</div>
-
+      <div class="mt-4 pt-2">
+        <v-btn
+          href="https://docs.google.com/document/d/1WSR42FEgUahJuR_RArW1wz7TfUBlgj13zekRidmQgs4/edit?usp=sharing"
+          target="_blank"
+          color="green"
+          dark
+          large
+        >
+          Download Resume
+          <v-icon right dark>fas fa-file-download</v-icon>
+        </v-btn>
+      </div>
+    </v-layout>
+  </v-layout>
 </template>
 
 <script>

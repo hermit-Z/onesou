@@ -86,18 +86,18 @@ export default {
         },
         { href: "https://twitter.com/EldinMatricar", icon: "mdi-twitter" },
         {
-          href: "https://www.linkedin.com/in/eldin-zaimovic",
+          href: "https://www.linkedin.com/in/hermit-Z",
           icon: "mdi-linkedin"
         },
         {
-          href: "https://www.xing.com/profile/Eldin_Zaimovic?sc_o=mxb_p",
+          href: "https://www.xing.com/profile/Phermit-Z",
           icon: "mdi-xing"
         },
         {
-          href: "https://www.facebook.com/EldinVasVoli",
+          href: "https://www.facebook.com/hermit-Z",
           icon: "mdi-facebook"
         },
-        { href: "https://www.instagram.com/matricar", icon: "mdi-instagram" }
+        { href: "https://www.instagram.com/hermit-Z", icon: "mdi-instagram" }
       ],
        loginEmailRules: [
             v => !!v || "Required",

@@ -7,22 +7,22 @@
           <span class="green--text">Touch</span>
         </h2>
         <div class="py-4 subheading font-weight-bold">
-          <v-icon large color="green" left>fas fa-map-marker-alt</v-icon>
-          <span>Doboj,&nbsp;</span>
-          <span class="green--text">Bosnia & Herzegovina</span>
+          <v-icon large color="green" left>mdi-google-maps</v-icon>
+          <span>Oran,&nbsp;</span>
+          <span class="green--text">Algeria</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
-          <v-icon large color="green" left>fas fa-envelope</v-icon>
-          <span>eldin@</span>
-          <span class="green--text">zaimovic.com</span>
+          <v-icon large color="green" left>mdi-email</v-icon>
+          <span>hermit.zah@</span>
+          <span class="green--text">protonmail.com</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
-          <v-icon large color="green" left>fas fa-phone</v-icon>
-          <span>+387&nbsp;</span>
-          <span class="green--text">61 596 676</span>
+          <v-icon large color="green" left>mdi-phone</v-icon>
+          <span>+213&nbsp;</span>
+          <span class="green--text">556735317</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
-          <v-icon large color="green" left>fas fa-check</v-icon>
+          <v-icon large color="green" left>mdi-check</v-icon>
           <span>Freelance</span>
           <span class="green--text">Available</span>
         </div>
@@ -34,7 +34,7 @@
           <span class="green--text">Form</span>
         </h2>
 
-        <form method="POST" action="https://formspree.io/eldin@zaimovic.com">
+        <form method="POST" action="hermit.zah@protonmail.com">
           <v-text-field
             name="name"
             color="green"
@@ -97,7 +97,7 @@ export default {
       {
         name: "description",
         content:
-          "Eldin Zaimovic's Contact Doboj Bosnia and Herzegovina Freelance Get in Touch ContactMe"
+          "Herlit ZAH Contact Oran Algeria Freelance Get in Touch ContactMe"
       },
       { charset: "utf-8" },
       { property: "og:title", content: "Eldin' Space" },
@@ -111,7 +111,7 @@ export default {
       {
         property: "og:description",
         content:
-          "Eldin Zaimovic's Contact Doboj Bosnia and Herzegovina Freelance Get in Touch ContactMe"
+          "Herlit ZAH Contact Oran Algeria Freelance Get in Touch ContactMe"
       }
     ]
   },
