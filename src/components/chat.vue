@@ -27,7 +27,7 @@
 </template>
 <script>
 export default {
-  name: 'app',
+  name: 'chat',
   data() {
     return {
       participants: [

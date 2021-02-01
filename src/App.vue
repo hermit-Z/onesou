@@ -20,8 +20,7 @@
         <burger/>
        </v-flex>
        <v-flex xs12 md3>
-       
-		<chat/>
+        <profilecard/> 
         </v-flex>
       </v-layout>
       <!-- If using vue-router 
@@ -42,7 +41,7 @@ import slidegroupeservice from './components/slidegroupservice'
 import semplefooter from './components/semplefooter'
 //import langselector from './components/langselector'
 import SimpleCarousel from './components/SimpleCarousel'*/
-import chat from './components/chat'
+import profilecard from './components/profilecard'
 import barnav from './components/barnav'
 import footerc from './components/footerf'
 //import burger from './components/burger'
@@ -55,8 +54,8 @@ export default {
   components: {
       barnav,
       footerc,
+      profilecard,
       Loginpage,
-      chat,
    },
 
   data: () => ({
