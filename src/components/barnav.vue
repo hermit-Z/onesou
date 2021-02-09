@@ -17,7 +17,7 @@
 
                <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-book-account</v-icon>
                <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-book-account-outline</v-icon>
-               <router-link to="/about">About Me</router-link>
+               <router-link to="/about">About</router-link>
 	</div>
 	<div class="ma-2" >
 
@@ -38,7 +38,7 @@
 
                <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-folder-home</v-icon>
                <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-folder-home-outline</v-icon>
-               <router-link to="/blog">BLOG</router-link>
+               <router-link to="/blog">Product</router-link>
 	</div>
 	<div class="ma-2" >
 
@@ -49,7 +49,6 @@
 
     <!--********************************************************************-->
     <!--********************************************************************-->
-{{$store.state.CarouselsIndex}}
 <!--********************************************************************-->
 
 
