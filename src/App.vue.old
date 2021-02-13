@@ -1,0 +1,163 @@
+<template>
+	<v-app ><!--:dark="false"-->
+	<!--********************************************************************-->
+	<!--********************************************************************-->
+    <v-app-bar
+      app
+      :color="colors[Xdark]"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+<!--********************************************************************-->
+{{$store.state.CarouselsIndex}}
+<!--********************************************************************-->
+
+
+      <v-spacer></v-spacer>
+
+            <v-btn icon  v-on:click="darktheme">
+            <v-icon  color="yellow accent-4 " v-if="Xdark===1">mdi-flashlight</v-icon>
+            <v-icon  color="grey lighten-2" v-if="Xdark===0">mdi-flashlight-off</v-icon>
+            </v-btn>
+            <v-btn icon  v-on:click="hearttheme">
+            <v-icon  color=" pink accent-3" v-if="Xheart===1">mdi-hand-heart</v-icon>
+            <v-icon  color="grey lighten-2" v-if="Xheart===0">mdi-hand-heart</v-icon>
+            </v-btn>
+            <v-btn icon  v-on:click="Searchtrue" v-if="SearchB===0" >
+            <v-icon  color=" pink accent-3" >mdi-magnify</v-icon>
+            </v-btn>
+        <v-col cols="2" sm="3" md="2"  v-if="SearchB===1">
+          <v-text-field
+            dense
+            label="Search"
+            @change="Searchtrue"
+          ></v-text-field>
+        </v-col>
+<!--********************************************************************-->
+
+
+<langselector1/>
+
+
+<!--********************************************************************-->
+      <v-chip
+      class="ma-2"
+      color="indigo"
+      text-color="white"
+      @click="$store.commit('invState', $store.state.Value_Inv_State)" 
+      >
+      Login
+
+      <v-icon right>mdi-account-outline</v-icon>
+    </v-chip>
+    </v-app-bar>
+    <bchat/>
+    <v-content>
+    <v-row>
+    <v-col cols="9">
+    <SimpleCarousel/>
+    </v-col>
+    <v-col cols="3">
+    <asuprime/>
+    </v-col>
+    </v-row>
+    <!--  <HelloWorld/>-->
+    <Loginpage  v-if="$store.state.Value_Inv_State===true" />
+    </v-content>
+    <slidegroupeservice/>
+    <semplefooter/>
+  </v-app>
+</template>
+
+<script>
+//import HelloWorld from './components/HelloWorld';
+//import FlagIcon from 'vue-flag-icon'
+import asuprime from './components/asuprime';
+import Loginpage from './components/login'
+import slidegroupeservice from './components/slidegroupservice'
+import semplefooter from './components/semplefooter'
+import bchat from './components/bchar'
+//import langselector from './components/langselector'
+import langselector1 from './components/langselector1'
+import SimpleCarousel from './components/SimpleCarousel'
+
+//import { mapState } from 'vuex'
+//import VueFlags from "node_modules/@growthbunker/vueflags"
+//Vue.use(FlagIcon);
+export default {
+  name: 'App',
+
+  components: {
+ //   HelloWorld,
+      asuprime,
+      Loginpage,
+      slidegroupeservice,
+      semplefooter,
+      SimpleCarousel,
+      bchat,
+      langselector1,
+//      FlagIcon,
+//      vueflags,
+   },
+
+  data: () => ({
+        counter: true,
+        counter1:0,
+        Xdark:0,
+        Xheart:0,
+	SearchB:0,
+        Loginstate:false,
+        colorN: 'blue-grey darken-4',
+        colors: [
+          'blue-grey darken-4',
+          'primary',
+          'blue',
+          'success',
+          'red',
+          'teal',
+                  ],
+          langstate:false,
+
+  }),
+   methods: {
+    plus: function () {
+          if(this.counter1>4){
+          this.counter1=0;
+          }else{this.counter1++;}
+
+          },
+   darktheme: function () {
+         this.Xdark=1-this.Xdark;
+          },
+   hearttheme: function () {
+         this.Xheart=1-this.Xheart;
+          },
+   Searchtrue: function () {
+         this.SearchB=1-this.SearchB;
+          }
+
+
+  }
+  // computed: {
+   //mapState(['year', 'month', 'day'])
+  //  }
+}
+</script>

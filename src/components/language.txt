@@ -1,0 +1,2 @@
+
+          :hint="`${select.langtxt}, ${select.langabbr}`"
