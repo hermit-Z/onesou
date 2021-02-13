@@ -94,8 +94,8 @@ export default {
       text1: ["Full Stack Developer", "Numerical Simulation", "Internet of things","Cryptography & Blockchain"],
       leftImage: "https://i.imgur.com/bU50uS9.jpg",
       rightImage: "https://i.imgur.com/z3ZoEEw.jpg",
-      leftImage2: "https://imgur.com/UfRzZhc",
-      rightImage2: "https://imgur.com/M8BeGGd",
+      leftImage2: "https://i.imgur.com/M8BeGGd.png",
+      rightImage2: "https://i.imgur.com/UfRzZhc.png",
       sliderLine: 0,
       hSize: 0,
       sliderPosition: 0.5
